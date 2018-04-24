@@ -7,19 +7,49 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nickName: UITextField!
+    @IBOutlet weak var msg: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        Auth.auth().signInAnonymously(completion: nil)
+
+        //取得之前暱稱
+        if let lastNickname = UserDefaults.standard.string(forKey: "nickname"){
+            self.nickName.text = lastNickname
+        }
+
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+
+    @IBAction func enterForum(_ sender: UIButton) {
+        if let enteredNickname = nickName.text{
+            if enteredNickname.count < 2{
+                showMsg(msg: "錯誤：暱稱至少兩字元")
+                msg.text = "錯誤：暱稱至少兩字元"
+            }else{
+                UserDefaults.standard.set(enteredNickname, forKey: "nickname")
+                performSegue(withIdentifier: "goForumList", sender: self)
+            }
+        }
     }
-
-
 }
+
+extension UIViewController{
+
+    func showMsg(msg:String){
+        let alert = UIAlertController(title: msg, message: nil, preferredStyle: .alert)
+        present(alert, animated: true) {
+            alert.dismiss(animated: true, completion: nil)
+        }
+    }
+}
+
 

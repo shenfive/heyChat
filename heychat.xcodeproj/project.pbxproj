@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0E41BFE7403A2F16FCFE1E9F /* Pods_heychat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CB87830991B19C17BFDF98C /* Pods_heychat.framework */; };
+		BA8F5E0C208E0AC80011CA22 /* FourmListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F5E0B208E0AC80011CA22 /* FourmListViewController.swift */; };
+		BA8F5E10208E4D9D0011CA22 /* DiscViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8F5E0F208E4D9D0011CA22 /* DiscViewController.swift */; };
+		BA9269C5208F3E990097A075 /* DiscItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9269C4208F3E990097A075 /* DiscItemTableViewCell.swift */; };
+		BA9269C7208F3F430097A075 /* FourmListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9269C6208F3F430097A075 /* FourmListTableViewCell.swift */; };
 		BAA3BAC5208B8435003D74C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA3BAC4208B8435003D74C5 /* AppDelegate.swift */; };
 		BAA3BAC7208B8435003D74C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA3BAC6208B8435003D74C5 /* ViewController.swift */; };
 		BAA3BACA208B8435003D74C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAA3BAC8208B8435003D74C5 /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* Begin PBXFileReference section */
 		7CB87830991B19C17BFDF98C /* Pods_heychat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heychat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		809B02D145522AB2AEC2AE75 /* Pods-heychat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heychat.release.xcconfig"; path = "Pods/Target Support Files/Pods-heychat/Pods-heychat.release.xcconfig"; sourceTree = "<group>"; };
+		BA8F5E0B208E0AC80011CA22 /* FourmListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourmListViewController.swift; sourceTree = "<group>"; };
+		BA8F5E0F208E4D9D0011CA22 /* DiscViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscViewController.swift; sourceTree = "<group>"; };
+		BA9269C4208F3E990097A075 /* DiscItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscItemTableViewCell.swift; sourceTree = "<group>"; };
+		BA9269C6208F3F430097A075 /* FourmListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourmListTableViewCell.swift; sourceTree = "<group>"; };
 		BAA3BAC1208B8435003D74C5 /* heychat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heychat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA3BAC4208B8435003D74C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAA3BAC6208B8435003D74C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,7 +94,11 @@
 				BAA3BACB208B8436003D74C5 /* Assets.xcassets */,
 				BAA3BACD208B8436003D74C5 /* LaunchScreen.storyboard */,
 				BAA3BAD6208B8468003D74C5 /* GoogleService-Info.plist */,
+				BA9269C6208F3F430097A075 /* FourmListTableViewCell.swift */,
+				BA9269C4208F3E990097A075 /* DiscItemTableViewCell.swift */,
 				BAA3BAD0208B8436003D74C5 /* Info.plist */,
+				BA8F5E0F208E4D9D0011CA22 /* DiscViewController.swift */,
+				BA8F5E0B208E0AC80011CA22 /* FourmListViewController.swift */,
 			);
 			path = heychat;
 			sourceTree = "<group>";
@@ -227,7 +239,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAA3BAC7208B8435003D74C5 /* ViewController.swift in Sources */,
+				BA8F5E10208E4D9D0011CA22 /* DiscViewController.swift in Sources */,
+				BA8F5E0C208E0AC80011CA22 /* FourmListViewController.swift in Sources */,
+				BA9269C7208F3F430097A075 /* FourmListTableViewCell.swift in Sources */,
 				BAA3BAC5208B8435003D74C5 /* AppDelegate.swift in Sources */,
+				BA9269C5208F3E990097A075 /* DiscItemTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,7 +391,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XSVW22JPST;
 				INFOPLIST_FILE = heychat/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = idv.sjw.heychat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -391,7 +410,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XSVW22JPST;
 				INFOPLIST_FILE = heychat/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = idv.sjw.heychat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
